@@ -6,15 +6,18 @@ import { FPV } from './components/FPV.jsx'
 import { Player } from './components/Player.jsx'
 function App() {
   return (
+    <>
       <Canvas>
-        <Sky  sunPosition={[100, 100, 20]}/>
+        <Sky sunPosition={[100, 100, 20]} />
         <ambientLight intensity={0.5} />
-        <FPV/>
+        <FPV />
         <Physics>
           <Player />
           <Ground />
         </Physics>
       </Canvas>
+      <div className="pointer">+</div>
+    </>
   )
 }
 
